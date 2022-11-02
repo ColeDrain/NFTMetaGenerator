@@ -23,6 +23,7 @@ def generate_final_output(hash_list):
     df['Hash'] = hash_list
     df.to_csv('output/final_output.csv', index=False)
 
+
 def main(filepath):
     '''Calls other functions'''
 
@@ -32,7 +33,6 @@ def main(filepath):
 
     collection['name'] = collection_name
     collection['id'] = collection_id
-
 
 
     with open(filepath,'r') as csvfile:
