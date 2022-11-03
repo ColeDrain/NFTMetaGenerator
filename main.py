@@ -90,6 +90,7 @@ def func_main(filepath):
 
 
 def clean_csv(csv_path):
+    '''Fills CSV with Team Names'''
     df = pd.read_csv(csv_path)
     df = df.ffill()
     df.to_csv(csv_path, index=False)
