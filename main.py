@@ -72,9 +72,9 @@ def func_main(filepath):
             with open(f"metadata/{name}.json","w") as f:
                 f.write(json.dumps(jsondata, indent=4))
 
-            # hash_list.append(hash_jsons(f"metadata/{name}.json"))
+            hash_list.append(hash_jsons(f"metadata/{name}.json"))
 
-        # generate_final_output(hash_list)
+        generate_final_output(hash_list)
 
 
 
