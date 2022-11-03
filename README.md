@@ -1,5 +1,11 @@
 ## NFT Metadata JSON Generator
 
+### Usage
+
+First, clone this repo from your terminal with `git clone https://github.com/ColeDrain/NFTMetaGenerator.git` or download manually
+
+If cloning, make sure to change directory: `cd NFTMetaGenerator`
+
 Put the CSV containing NFT details in the _csv_ directory
 Then from the root directory, run `py main.py`
 
