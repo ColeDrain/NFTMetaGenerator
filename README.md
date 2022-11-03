@@ -6,7 +6,7 @@ First, clone this repo from your terminal with `git clone https://github.com/Col
 
 If cloning, make sure to change directory: `cd NFTMetaGenerator`
 
-Put the CSV containing NFT details in the _csv_ directory, name the file ### main.csv
+Put the CSV containing NFT details in the _csv_ directory, name the file _main.csv_
 Then from the root directory, run `py main.py`
 
 For each NFT a metadata.json is generated and stored.
