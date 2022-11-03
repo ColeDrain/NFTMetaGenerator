@@ -24,7 +24,7 @@ def generate_final_output(hash_list):
     df.to_csv('output/final_output.csv', index=False)
 
 
-def main(filepath):
+def func_main(filepath):
     '''Calls other functions'''
 
     hash_list = []
@@ -45,9 +45,18 @@ def main(filepath):
             sensitive_content = False
             description = csvreader[i][3]
             gender = csvreader[i][4]
-            series_total = 562
-
-            attributes_list.append({"trait_type":"Gender","value":gender})
+            attributes = csvreader[i][5]
+            series_total = 420
+            attributes = attributes.split(",")
+            try:
+                for attr in attributes:
+                    attr_map = attr.split(":")
+                    attr_name = attr_map[0].strip()
+                    attr_value = attr_map[1].strip()
+                    if attr_value.lower() != 'none':
+                        attributes_list.append({"trait_type":attr_name,"value":attr_value})
+            except:
+                print(attributes)
 
             jsondata['format'] = n_format
             jsondata['name'] = name
@@ -63,14 +72,14 @@ def main(filepath):
             with open(f"metadata/{name}.json","w") as f:
                 f.write(json.dumps(jsondata, indent=4))
 
-            hash_list.append(hash_jsons(f"metadata/{name}.json"))
+            # hash_list.append(hash_jsons(f"metadata/{name}.json"))
 
-        generate_final_output(hash_list)
+        # generate_final_output(hash_list)
 
 
 
 if __name__ == "__main__":
-    main_function(csv_path)
+    func_main(csv_path)
 
 
 # filename.output.csv
