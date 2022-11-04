@@ -20,7 +20,6 @@ If cloning, make sure to change directory: `cd NFTMetaGenerator`
 ### Install Requirements
 pip install -r requirements.txt
 
-Put the CSV containing NFT details in the _csv_ directory, name the file _main.csv_
 Then from the root directory, run `py main.py`
 
 For each NFT a metadata.json is generated and stored.
