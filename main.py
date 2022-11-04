@@ -22,7 +22,7 @@ def generate_final_output(hash_list):
     '''Appends Hashes to Original CSV'''
     df = pd.read_csv('csv\main.csv')
     df['Hash'] = hash_list
-    df.to_csv('output/final.output.csv', index=False)
+    df.to_csv('output/main.output.csv', index=False)
 
 
 def func_main(filepath):
