@@ -36,7 +36,7 @@ def func_main(filepath):
     collection['id'] = collection_id
     collection_attributes = {
             "type": collection_description,
-            "value": "Rewards for accomplishmentsduring HNGi9."
+            "value": "Rewards for accomplishments during HNGi9."
     }
     collection['attributes'] = [collection_attributes]
 
@@ -67,8 +67,8 @@ def func_main(filepath):
                     if attr_value.lower() != 'none':
                         attributes_list.append({"trait_type":attr_name,"value":attr_value})
             except:
-                print("These attributes have issues:")
-                print(attributes)
+                print("This row has issues:")
+                print(csvreader[i])
 
             jsondata['format'] = n_format
             jsondata['name'] = name
